@@ -4,15 +4,16 @@ using namespace std;
 
 int main()
 {
-    int i=0,flag = 0;
+    int i,token=1;
+    while(1){ 
     int NoIt = 1;
     //using this flag to put the code into while loop to order multiple items.
-    int price=0;
+    int price=0,flag = 1;
     /*using this price var to declare the total money to user and send it to shopkeeper for cash payment later sending it to main file 
     in which the data is being stored. SQL database*/
 
-    while(flag = 1)
-{
+    while(flag == 1)
+    {
 
     
     
@@ -49,17 +50,21 @@ int main()
     {
         NoIt++;
         cout<<"Your total is:"<<price<<endl;
-        continue;
+
     }
 
     else 
     {
-        cout<<"Your total is:"<<price<<endl;
-        // cusIt and prices  will be sent
+        cout<<"Your total is: "<<price<<endl;
+        flag == 0;
+        cout<<"And your token no. is: "<<token<<endl;
+        // token, cusIt and prices  will be sent
        // request is send to sk 
     }
    
-    //THIS IS WHERE TO END THE WHILE LOOP
+        //THIS IS WHERE TO END THE WHILE LOOP
+    }
+    token++;
 }
 
     return 0;
