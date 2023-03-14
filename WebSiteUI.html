@@ -1,0 +1,36 @@
+<html>
+    <head><title>UI WEBSITE</title></head>
+    <body onload ="get()">
+        <h1>FOOPAY: Order Smart!</h1>
+       
+            <fieldset>
+                <legend>Enter all your needs!</legend>
+            <label>
+                <p>Enter the Item no. from the <menu></menu></p>
+                <label > No.</label><input type = "number" min = "0" max = "700" step = "1" id = "ItNo"> <br/><br/>
+                <p>Enter the quantity of the item <menu></menu></p>
+                <label > X</label><input type = "number" min = "0" max = "700" step = "1" id = ItQua> <br/><br/>
+                Do you want to order something else?
+                <br></br><lable></lable> <input type ="radio" name ="Yes" id = "Yes" > <label for ="YesNo">Yes</label><input type ="radio" name ="No" id = "YesNo"> <label for = "No">No</label><br/>
+            
+                <input type = "submit" value = "save" button onclick ="save()"><br/><br/>
+                <p id="outp"></p>
+            </label>
+           
+        </form>
+</body>
+<script>
+   var storedItem = localStorage.getItem("storedItem");
+   function save(){
+    var Item = document.getElementById("input").value;
+    localStorage.setItem("storedItem",Item);
+    document.getElementById("savedText").innerHTML=Item+"SAVED";
+
+   }
+   function get(){
+localStorage.getItem("storedItem");
+document.getElementById("openedText").innerHTML=Item+"OPENED";
+   }
+   
+   </script>
+</html>
